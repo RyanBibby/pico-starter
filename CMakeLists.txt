@@ -16,7 +16,7 @@ pico_sdk_init()
 
 # Add your source files
 add_executable(${NAME}
-    main.cpp # <-- Add source files here!
+        main.cpp # <-- Add source files here!
 )
 
 # Include required libraries
@@ -25,14 +25,18 @@ include(common/pimoroni_i2c)
 include(common/pimoroni_bus)
 include(libraries/bitmap_fonts/bitmap_fonts)
 include(libraries/hershey_fonts/hershey_fonts)
-include(libraries/pico_explorer/pico_explorer)
 include(libraries/pico_display_2/pico_display_2)
+include(drivers/rgbled/rgbled)
+include(drivers/button/button)
+include(drivers/st7789/st7789)
+include(libraries/pico_graphics/pico_graphics)
+
 
 # Don't forget to link the libraries you need!
 target_link_libraries(${NAME}
     pimoroni_i2c
-    pico_explorer
-    pico_stdlib hardware_spi hardware_pwm hardware_dma pico_display_2 st7789 pico_graphics # <-- List libraries here!
+    pico_cyw43_arch_none
+    pico_stdlib pico_multicore hardware_spi hardware_pwm hardware_dma pico_display_2 button rgbled st7789 pico_graphics # <-- List libraries here!
 )
 
 # create map/bin/hex file etc.
