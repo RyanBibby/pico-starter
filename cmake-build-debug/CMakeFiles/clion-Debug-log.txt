@@ -1,0 +1,20 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/ryanbibby/projects/pico/pico-boilerplate -B /Users/ryanbibby/projects/pico/pico-boilerplate/cmake-build-debug
+PICO_SDK_PATH is /Users/ryanbibby/projects/pico/pico-sdk
+Defaulting PICO_PLATFORM to rp2040 since not specified.
+Defaulting PICO platform compiler to pico_arm_gcc since not specified.
+PICO compiler is pico_arm_gcc
+Defaulting PIMORONI_PICO_PATH as sibling of PICO_SDK_PATH: /Users/ryanbibby/projects/pico/pico-sdk/../pimoroni-pico
+PIMORONI_PICO_PATH is /Users/ryanbibby/projects/pico/pimoroni-pico
+CMake Error at /Users/ryanbibby/projects/pico/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:28 (message):
+  Compiler 'arm-none-eabi-gcc' not found, you can specify search path with
+  "PICO_TOOLCHAIN_PATH".
+Call Stack (most recent call first):
+  /Users/ryanbibby/projects/pico/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:20 (pico_find_compiler)
+  /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:170 (include)
+  CMakeLists.txt:10 (project)
+
+
+CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_ASM_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
